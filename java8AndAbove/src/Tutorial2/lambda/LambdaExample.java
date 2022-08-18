@@ -43,6 +43,18 @@ public class LambdaExample {
 		
 		Shape circle = () -> System.out.println("Circle class draw() method");
 		circle.draw();
+		
+		//short way
+		System.out.println();
+		
+		printShape(rectangle);
+		printShape(square);
+		printShape(circle);
+		
+	}
+	
+	public static void printShape(Shape shape) {
+		shape.draw();
 	}
 
 }
