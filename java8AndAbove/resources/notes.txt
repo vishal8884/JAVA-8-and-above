@@ -1,0 +1,4 @@
+Functional interface --> 
+
+1) has only one abstract method
+2) can have nay number of default and static methods
