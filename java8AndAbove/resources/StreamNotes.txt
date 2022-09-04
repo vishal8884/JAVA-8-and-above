@@ -1,0 +1,13 @@
+1) Stream is a sequence of objects from source, which supports aggregate operations.
+
+     Java.util.stream  --> has functional style programming
+     
+     
+     
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+     
+     
+                  How stream works
+
+
+Source --> Filter --> Sort -> Map --> Collect
