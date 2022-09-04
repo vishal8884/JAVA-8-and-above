@@ -2,7 +2,7 @@ package Tutorial2.functionalInterface;
 
 import java.util.function.Consumer;
 
-class ConsumerImpl implements Consumer<String>{     //Consumer accepts input is void method          //Traditional approach
+class ConsumerImpl implements Consumer<String>{     //   input type -> one Object       return type -> none
 
 	@Override
 	public void accept(String s) {

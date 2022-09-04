@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 
 public class SupplierInterfaceDemo {
 	
-	class SupplierImpl implements Supplier<LocalDateTime>{        //Traditional approach
+	class SupplierImpl implements Supplier<LocalDateTime>{        //   input type -> none       return type -> object
 		@Override
 		public LocalDateTime get() {
 			return LocalDateTime.now();

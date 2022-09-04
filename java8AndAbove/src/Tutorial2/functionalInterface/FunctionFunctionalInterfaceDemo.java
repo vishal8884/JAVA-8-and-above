@@ -2,7 +2,7 @@ package Tutorial2.functionalInterface;
 
 import java.util.function.Function;
 
-class FunctionImpl implements Function<String, Integer>{            // Function functional interface accepts some input and produces output
+class FunctionImpl implements Function<String, Integer>{             //   input type -> one Object       return type -> one object
 
 	@Override
 	public Integer apply(String t) {
