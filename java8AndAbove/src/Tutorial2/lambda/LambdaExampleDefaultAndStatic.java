@@ -9,7 +9,7 @@ interface Shape2 { // this is functional interface
 	}
 }
 
-class Rectangle2 implements Shape {
+class Rectangle2 implements Shape2 {
 
 	@Override
 	public void draw() {
@@ -17,7 +17,7 @@ class Rectangle2 implements Shape {
 	}
 }
 
-class Square2 implements Shape {
+class Square2 implements Shape2 {
 
 	@Override
 	public void draw() {
@@ -25,7 +25,7 @@ class Square2 implements Shape {
 	}
 }
 
-class Circle2 implements Shape {
+class Circle2 implements Shape2 {
 
 	@Override
 	public void draw() {
@@ -37,15 +37,15 @@ public class LambdaExampleDefaultAndStatic {
 
 	public static void main(String[] args) {
 
-		Shape rectangle = () -> System.out.println("Rectangle class draw() method");      //here we are directly implementing instead of creating a 
+		Shape2 rectangle = () -> System.out.println("Rectangle class draw() method");      //here we are directly implementing instead of creating a 
 		rectangle.draw();                                                                 //seperate impl class for functional interface
 		
-		Shape square = () -> {
+		Shape2 square = () -> {
 			System.out.println("Square class draw() method");
 		};
 		square.draw();
 		
-		Shape circle = () -> System.out.println("Circle class draw() method");
+		Shape2 circle = () -> System.out.println("Circle class draw() method");
 		circle.draw();
 		
 		//short way
@@ -57,7 +57,7 @@ public class LambdaExampleDefaultAndStatic {
 		
 	}
 	
-	public static void printShape(Shape shape) {
+	public static void printShape(Shape2 shape) {
 		shape.draw();
 	}
 

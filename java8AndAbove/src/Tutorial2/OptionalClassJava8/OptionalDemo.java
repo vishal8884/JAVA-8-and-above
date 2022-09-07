@@ -14,6 +14,7 @@ public class OptionalDemo {
 		String email = "vishal@gmail.com";
 		Optional<String> emailOptional = Optional.of(email);                    // it throws null pointer exception
 		System.out.println("emailOptional :: "+emailOptional);
+		System.out.println();
 		
 /////////////////////////////////////////////////////Traditional null check///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
@@ -26,24 +27,28 @@ public class OptionalDemo {
 			System.out.println("no value present");
 		}
 		
+		System.out.println();
 /////////////////////////////////////////////////OrElse()///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		Optional<String> stringOptional2 = Optional.ofNullable("vishal"); 
 		String stringop2 = stringOptional2.orElse("not present");
 		System.out.println("stringop2 :: "+stringop2);
 		
+		System.out.println();
 ////////////////////////////////////////////orElseGet(Supplier interface lambda expression)/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		Optional<String> stringOptional3 = Optional.ofNullable(null); 
 		String stringOptional3A = stringOptional3.orElseGet(() -> "not present using supplier functional interface");
 		System.out.println("stringOptional3A :: "+stringOptional3A);
 		
+		System.out.println();
 ////////////////////////////////////////////orElseThrow/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		Optional<String> stringOptional4 = Optional.ofNullable("email.com"); 
 		String a1 = stringOptional4.orElseThrow(() -> new IllegalArgumentException("illgal exception occured"));
 		System.out.println("a1 :: "+a1);
 		
+		System.out.println();
 ///////////////////////////////////////IfPresent()////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 		Optional<String> gender = Optional.of("MALE");
@@ -52,6 +57,7 @@ public class OptionalDemo {
 		gender.ifPresent((s) -> System.out.println("value is present1 "+s));
 		e.ifPresent((s) -> System.out.println("values is present2 :: "+s));
 		
+		System.out.println();
 //////////////////////////////////////////Filter()//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		String result = "abc";
@@ -64,6 +70,7 @@ public class OptionalDemo {
 		optionalString.filter((n) -> n.contains("def"))
 		              .ifPresent((res) -> System.out.println("result2 is also present :: "+res));
 		
+		System.out.println();
 /////////////////////////////////////////////Map method in optional class//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 		String result3 = "def";

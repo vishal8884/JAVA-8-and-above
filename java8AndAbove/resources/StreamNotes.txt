@@ -11,3 +11,13 @@
 
 
 Source --> Filter --> Sort -> Map --> Collect
+
+eg -> List<String> alpha = Arrays.asList("a","b","x","s","p");
+	  List<String> alphaUpper2 = alpha
+		          .stream()
+		          .filter((s) -> !s.isBlank())
+		          .sorted((o1,o2) -> o1.compareTo(o2))
+		          .map((s) -> s.toUpperCase())
+		          .collect(Collectors.toList());
+		
+	  System.out.println("alphaUpper2 :: "+alphaUpper2);
