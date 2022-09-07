@@ -1,6 +1,5 @@
 package Tutorial2.functionalInterface.sample;
 
-@FunctionalInterface
 public interface MyFunctionalInterace {  //functional interface has only 1 abstract method
 
 	                                     //any number of default and static method
